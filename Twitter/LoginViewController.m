@@ -41,6 +41,7 @@
     User *user = [User currentUser];
     if(user != nil) {
         NSLog(@"Welcome %@", user.name);
+        [self performSegueWithIdentifier:@"loginSegue" sender:self];
         //[self presentViewController:[[TweetsViewController alloc] init] animated:YES completion:nil];
     } else {
         NSLog(@"Not logged in");
